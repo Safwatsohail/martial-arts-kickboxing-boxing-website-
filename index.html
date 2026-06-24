@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Academy - Martial Arts Training Center Dubai</title>
+    <meta name="description"
+        content="Transform your life through martial arts at Alpha Academy Dubai. Expert training in Jiu-Jitsu, MMA, and Muay Thai. Be Better Than Yourself.">
+    <link rel="icon" type="image/png" href="log_alpha.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- Loading Screen -->
+    <div id="alpha-loader-wrapper">
+        <img src="alpha back logo.png" alt="Alpha Logo" id="alpha-loader-image" />
+        <h1 id="alpha-loader-text">ALPHA ACADEMY</h1>
+        <div id="alpha-progress-bar">
+            <div id="alpha-progress-fill"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home"><img src="log_alpha.png" alt="logo"></a>
+                <span class="logo-text">ALPHA ACADEMY</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#programs" class="nav-link">Programs</a>
+                <a href="#schedule" class="nav-link">Schedule</a>
+                <a href="#coaching" class="nav-link">Coaching</a>
+                <a href="#philosophy" class="nav-link">Philosophy</a>
+                <a href="#wellbeing" class="nav-link">Well-being</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-hamburger" id="navHamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="https://static.wixstatic.com/media/3b2e3be4f3524977abdf4920481e5ffa.jpg/v1/fill/w_2940,h_2892,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/3b2e3be4f3524977abdf4920481e5ffa.jpg"
+                alt="Hero Background" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title glitch" data-text="BE BETTER THAN YOURSELF">BE BETTER THAN YOURSELF</h1>
+                <p class="hero-subtitle">Transform your life through the discipline and power of martial arts at Dubai's
+                    premier training academy.</p>
+                <div class="hero-cta">
+                    <a href="free_class_page.html">
+                        <button class="cta-btn primary-btn glow-btn" id="heroCtaBtn">
+                          <span>START YOUR FREE CLASS</span>
+                          <i class="fas fa-arrow-right"></i>
+                        </button>
+                      </a>
+                      
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ABOUT ALPHA ACADEMY</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="about-subtitle">Elevating Lives Through Martial Arts</h3>
+                    <p class="about-description">
+                        At Alpha Academy, we believe that martial arts is more than just physical training—it's a
+                        transformative journey that enhances every aspect of your life. Our mission is to improve the
+                        quality of life for our students through the time-tested principles of discipline, respect, and
+                        continuous self-improvement.
+                    </p>
+                    <p class="about-description">
+                        Located in the heart of Dubai, we provide world-class training in a supportive environment where
+                        beginners and experts alike can push their limits and discover their true potential.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Students Trained</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Expert Instructors</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="team alpha.avif" alt="Alpha Academy Training" class="about-img">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">TRAINING PROGRAMS</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Master the art of combat through our specialized training programs</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card" data-program="jiujitsu">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="jit.jpg" alt="Jiu-Jitsu Training">
+                                <div class="card-overlay"></div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">JIU-JITSU</h3>
+                                <p class="card-subtitle">The Gentle Art</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h3>Brazilian Jiu-Jitsu</h3>
+                                <ul class="card-features">
+                                    <li><i class="fas fa-check"></i> Ground fighting techniques</li>
+                                    <li><i class="fas fa-check"></i> Submission holds & escapes</li>
+                                    <li><i class="fas fa-check"></i> Self-defense applications</li>
+                                    <li><i class="fas fa-check"></i> Mental strategy & patience</li>
+                                </ul>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card" data-program="mma">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="mma.jpg" alt="MMA Training">
+                                <div class="card-overlay"></div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">MMA</h3>
+                                <p class="card-subtitle">Mixed Martial Arts</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h3>Mixed Martial Arts</h3>
+                                <ul class="card-features">
+                                    <li><i class="fas fa-check"></i> Complete fighting system</li>
+                                    <li><i class="fas fa-check"></i> Striking & grappling</li>
+                                    <li><i class="fas fa-check"></i> Conditioning & fitness</li>
+                                    <li><i class="fas fa-check"></i> Competition preparation</li>
+                                </ul>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card" data-program="muaythai">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="muay thai.jpg" alt="Muay Thai Training">
+                                <div class="card-overlay"></div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">MUAY THAI</h3>
+                                <p class="card-subtitle">The Art of Eight Limbs</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h3>Muay Thai</h3>
+                                <ul class="card-features">
+                                    <li><i class="fas fa-check"></i> Striking with 8 limbs</li>
+                                    <li><i class="fas fa-check"></i> Clinch work & elbows</li>
+                                    <li><i class="fas fa-check"></i> Traditional Thai techniques</li>
+                                    <li><i class="fas fa-check"></i> Power & flexibility</li>
+                                </ul>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-card" data-program="Kick Boxing">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="kick boxing .jpg" alt="Kick Boxing">
+                                <div class="card-overlay"></div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Kick Boxing</h3>
+                                <p class="card-subtitle">The Art That Kicks</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h3>Kick Boxing</h3>
+                                <ul class="card-features">
+                                    <li><i class="fas fa-check"></i> Master the art of striking</li>
+                                    <li><i class="fas fa-check"></i> Punches, kicks, knees, and movement</li>
+                                    <li><i class="fas fa-check"></i> Boost endurance & full-body fitness</li>
+                                    <li><i class="fas fa-check"></i> Train for competition or self-defense</li>
+                                </ul>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+<!-- Schedule Section -->
+<section id="schedule">
+  <h2 class="section-title">Schedule</h2>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Time" class="time-col">10:00 AM</td>
+          <td data-label="Monday">Jiu Jitsu</td>
+          <td data-label="Tuesday">No Gi</td>
+          <td data-label="Wednesday">Jiu Jitsu</td>
+          <td data-label="Thursday">No Gi</td>
+          <td data-label="Friday">Jiu Jitsu</td>
+        </tr>
+        <tr>
+          <td data-label="Time" class="time-col">4:30 PM</td>
+          <td data-label="Monday">MMA Kids G.A</td>
+          <td data-label="Tuesday">MMA Kids G.B</td>
+          <td data-label="Wednesday">MMA Kids G.A</td>
+          <td data-label="Thursday">MMA Kids G.B</td>
+          <td data-label="Friday">MMA Mix</td>
+        </tr>
+        <tr>
+          <td data-label="Time" class="time-col">5:30 PM</td>
+          <td data-label="Monday" class="highlight">MMA Pro</td>
+          <td data-label="Tuesday">MMA</td>
+          <td data-label="Wednesday" class="highlight">MMA Pro</td>
+          <td data-label="Thursday">MMA</td>
+          <td data-label="Friday" class="highlight">MMA Pro</td>
+        </tr>
+        <tr>
+          <td data-label="Time" class="time-col">6:30 PM</td>
+          <td data-label="Monday">Muay Thai</td>
+          <td data-label="Tuesday">PT</td>
+          <td data-label="Wednesday">Muay Thai</td>
+          <td data-label="Thursday">PT</td>
+          <td data-label="Friday">Muay Thai</td>
+        </tr>
+        <tr>
+          <td data-label="Time" class="time-col">7:30 PM</td>
+          <td data-label="Monday">Jiu Jitsu</td>
+          <td data-label="Tuesday" class="highlight">Kickboxing</td>
+          <td data-label="Wednesday">Jiu Jitsu</td>
+          <td data-label="Thursday" class="highlight">Kickboxing</td>
+          <td data-label="Friday">Jiu Jitsu</td>
+        </tr>
+        <tr>
+          <td data-label="Time" class="time-col">8:30 PM</td>
+          <td data-label="Monday">PT</td>
+          <td data-label="Tuesday">Jiu Jitsu</td>
+          <td data-label="Wednesday">PT</td>
+          <td data-label="Thursday">Jiu Jitsu</td>
+          <td data-label="Friday">PT</td>
+        </tr>
+        <tr>
+          <td class="sat-header" colspan="6">Saturday</td>
+        </tr>
+        <tr>
+          <td data-label="Time" class="time-col">10:30 AM</td>
+          <td data-label="Saturday" class="sat-content" colspan="5">Open Mat</td>
+        </tr>
+        <tr>
+          <td data-label="Time" class="time-col">2:00 PM</td>
+          <td data-label="Saturday" class="sat-content highlight" colspan="5">MMA</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+ <!-- Private Coaching Section -->
+    <section id="coaching" class="coaching">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">PRIVATE COACHING</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Accelerate your progress with personalized one-on-one training</p>
+            </div>
+            <div class="coaching-content">
+                <div class="coaching-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Personalized Training</h3>
+                            <p>Customized programs tailored to your specific goals and skill level</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Flexible Scheduling</h3>
+                            <p>Train on your schedule with sessions that fit your lifestyle</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Accelerated Progress</h3>
+                            <p>Achieve your goals faster with focused, individual attention</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Expert Guidance</h3>
+                            <p>Learn from certified instructors with years of competition experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="philosophy">
+        <div class="philosophy-bg">
+            <div class="philosophy-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">OUR PHILOSOPHY</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="philosophy-content">
+                <div class="philosophy-values">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-fist-raised"></i>
+                        </div>
+                        <h3>DISCIPLINE</h3>
+                        <p>Building mental fortitude through consistent practice and dedication</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>FOCUS</h3>
+                        <p>Developing laser-sharp concentration and mindful awareness</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>INTEGRITY</h3>
+                        <p>Upholding honor, respect, and ethical conduct in all aspects of life</p>
+                    </div>
+                </div>
+                <div class="philosophy-quotes">
+                    <div class="quote-container">
+                        <blockquote class="philosophy-quote active">
+                            "The ultimate aim of martial arts is not having to use them."
+                        </blockquote>
+                        <blockquote class="philosophy-quote">
+                            "A warrior's greatest weapon is patience."
+                        </blockquote>
+                        <blockquote class="philosophy-quote">
+                            "True strength comes from within."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Well-being Section -->
+    <section id="wellbeing" class="wellbeing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">HOLISTIC WELL-BEING</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Transform your mind, body, and spirit through martial arts</p>
+            </div>
+            <div class="wellbeing-grid">
+                <div class="wellbeing-card physical">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>PHYSICAL HEALTH</h3>
+                    <ul class="wellbeing-benefits">
+                        <li>Enhanced cardiovascular fitness</li>
+                        <li>Improved strength and flexibility</li>
+                        <li>Better coordination and balance</li>
+                        <li>Increased energy levels</li>
+                    </ul>
+                </div>
+                <div class="wellbeing-card mental">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>MENTAL CLARITY</h3>
+                    <ul class="wellbeing-benefits">
+                        <li>Reduced stress and anxiety</li>
+                        <li>Improved focus and concentration</li>
+                        <li>Enhanced problem-solving skills</li>
+                        <li>Greater self-confidence</li>
+                    </ul>
+                </div>
+                <div class="wellbeing-card emotional">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-icon">
+                        <i class="fas fa-heart" style="color: green;"></i>
+                    </div>
+                    <h3>EMOTIONAL BALANCE</h3>
+                    <ul class="wellbeing-benefits">
+                        <li>Better emotional regulation</li>
+                        <li>Increased resilience</li>
+                        <li>Stronger sense of purpose</li>
+                        <li>Deeper inner peace</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ✅ Contact Section Using FormSubmit (No Redirect) -->
+<section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">GET IN TOUCH</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Ready to begin your martial arts journey? Contact us today.</p>
+      </div>
+  
+      <div class="contact-content">
+        <!-- ✅ Contact Info -->
+        <div class="contact-info">
+          <h3>Visit Our Academy</h3>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>R1081-F1 Building, Wasl Green Park<br>Shop No: 05, Ras Al Khor, Dubai</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p>+971 56 111 0892</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p>info@alphaacademydubai.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div class="contact-details">
+              <h4>Hours</h4>
+              <p>Mon-Fri: 6:00 AM - 10:00 PM<br>Sat-Sun: 8:00 AM - 8:00 PM</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- ✅ Contact Form -->
+        <div class="contact-form-container">
+          <form id="contactForm">
+            <h3>Send us a Message</h3>
+  
+            <!-- Hidden FormSubmit config -->
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Message from Alpha Academy Website">
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting Alpha Academy. We'll get back to you shortly.">
+            <input type="hidden" name="_captcha" value="false">
+  
+            <div class="form-group">
+              <input type="text" id="name" name="name" required>
+              <label for="name">Full Name</label>
+            </div>
+  
+            <div class="form-group">
+              <input type="email" id="email" name="email" required>
+              <label for="email">Email Address</label>
+            </div>
+  
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" required>
+              <label for="phone">Phone Number</label>
+            </div>
+  
+            <div class="form-group">
+                <select id="program" name="program" required>
+                    <option value="">Select Program</option>
+                    <option value="jiujitsu">Jiu-Jitsu</option>
+                    <option value="mma">MMA</option>
+                    <option value="muaythai">Muay Thai</option>
+                    <option value="general">kick boxing</option>
+                    <option value="private">Private Coaching</option>
+                    <option value="general">General Inquiry</option>
+                  </select>
+              <label for="program">Interested Program</label>
+            </div>
+  
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <label for="message">Message</label>
+            </div>
+  
+            <button type="submit" class="form-submit-btn glow-btn">
+              <span>SEND MESSAGE</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+  
+          <!-- ✅ Inline status message -->
+          <p id="statusMessage" style="margin-top: 10px;"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ✅ JavaScript to Submit via Fetch and Prevent Redirect -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const form = e.target;
+      const status = document.getElementById("statusMessage");
+     
+      status.style.color = "#333";
+  
+      const data = new FormData(form);
+  
+      fetch("https://formsubmit.co/ajax/alphaacademydxb.mma@gmail.com", {
+  method: "POST",
+  body: data,
+})
+  .then(response => {
+    if (response.ok) {
+      showToast("✅ Message sent successfully!");
+      form.reset();
+    } else {
+      throw new Error("Form submission failed");
+    }
+  })
+  .catch(error => {
+    showToast("❌ Failed to send message. Please try again.", "error");
+    console.error("Submission error:", error);
+  });
+    });
+  </script>
+  <div id="toastNotification" class="toast">
+    <p id="toastMessage">Message</p>
+  </div>
+  
+  
+  
+            <div class="map-container">
+                <div id="map" class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.581190359041!2d55.370532109589426!3d25.18361557762675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f673534b6078d%3A0x65d7f8edb1c6c0f7!2sAlpha%20Academy!5e0!3m2!1sen!2sae!4v1750856077355!5m2!1sen!2sae"
+                        width="100%" height="400" style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);"
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <img src="https://static.wixstatic.com/media/bf8899_58968eaf66f94fcba64c2351393ab178~mv2.png/v1/fill/w_128,h_152,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/bf8899_58968eaf66f94fcba64c2351393ab178~mv2.png"
+                                alt="">
+                        </div>
+                        <span class="footer-logo-text">ALPHA ACADEMY</span>
+                    </div>
+                    <p class="footer-description">
+                        Transform your life through martial arts. Be better than yourself.
+                    </p>
+                    <!-- Updated Social Media Links -->
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/alpha.academy_dxb/" class="social-link" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@alpha.academydxb" class="social-link" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/971561110892" class="social-link" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#coaching">Private Coaching</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="#programs">Jiu-Jitsu</a></li>
+                        <li><a href="#programs">MMA</a></li>
+                        <li><a href="#programs">Muay Thai</a></li>
+                        <li><a href="#programs">Kickboxing</a></li>
+                        <li><a href="#coaching">Private Sessions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> R1081-F1, Wasl Green Park, Shop 05, Ras Al Khor, Dubai
+                        </p>
+                        <p><i class="fas fa-phone"></i> +971 56 111 0892</p>
+                        <p><i class="fas fa-envelope"></i> alphaacademydxb.mma@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Alpha Academy Dubai. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <button class="scroll-to-top" id="scrollToTop">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        <!-- Book a Free Class Floating Bubble -->
+         <!-- Book Class Vertical Floating Bubble -->
+         <!-- Book Class Vertical Floating Bubble -->
+<a href="free_class_page.html" class="book-class-bubble-vertical" id="bookClassBtn" title="Book a Free Class">
+    <span class="bubble-text bubble-text-default">Book a Class</span>
+    <span class="bubble-text bubble-text-hover">Book a Free Class</span>
+  </a>
+  
+          <div id="alpha-loader-wrapper" style="display: none;">
+            <img src="alpha back logo.png" alt="Alpha Logo" id="alpha-loader-image" />
+            <h1 id="alpha-loader-text">ALPHA ACADEMY</h1>
+            <div id="alpha-progress-bar">
+              <div id="alpha-progress-fill"></div>
+            </div>
+          </div>
+  
+  <style>
+  .book-class-bubble-vertical {
+      position: fixed;
+      right: 30.5px;
+      bottom: 100px;
+      background: linear-gradient(145deg, #330000, #7f1d1d);
+      color: #852323;
+      border-radius: 40px;
+      height: 180px;
+      width: 45px;
+      padding: 10px 5px;
+      text-decoration: none;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 0 18px rgba(239, 68, 68, 0.5);
+      transition: all 0.4s ease-in-out;
+      flex-direction: column;
+  }
+  
+  .book-class-bubble-vertical .bubble-text {
+      writing-mode: vertical-rl;
+      text-align: center;
+      transform: rotate(180deg);
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      transition: opacity 0.3s ease-in-out;
+      white-space: nowrap;
+      color: white;
+      pointer-events: none;
+  }
+  
+  .bubble-text-hover {
+      opacity: 0;
+      position: absolute;
+      pointer-events: none;
+  }
+  
+  .book-class-bubble-vertical:hover {
+      height: 220px;
+      background: linear-gradient(145deg, #7f1d1d, #1a0000);
+  }
+  
+  .book-class-bubble-vertical:hover .bubble-text-default {
+      opacity: 0;
+  }
+  
+  .book-class-bubble-vertical:hover .bubble-text-hover {
+      opacity: 1;
+  }
+  
+  @media (max-width: 640px) {
+      .book-class-bubble-vertical {
+          right: 15px;
+          height: 140px;
+          width: 40px;
+      }
+  
+      .book-class-bubble-vertical:hover {
+          height: 180px;
+      }
+  }
+  
+  </style>
+  <style>
+    #alpha-loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+    
+    #alpha-loader-image {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    
+    #alpha-loader-text {
+      font-family: 'Orbitron', monospace;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: red;
+      margin-bottom: 30px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    
+    #alpha-progress-bar {
+      width: 200px;
+      height: 8px;
+      background-color: #333;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    
+    #alpha-progress-fill {
+      height: 100%;
+      width: 0%;
+      background-color: red;
+      animation: alpha-fill-bar 2s linear forwards;
+    }
+    
+    @keyframes alpha-fill-bar {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    </style>
+    
+  
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const bookBtn = document.getElementById("bookClassBtn");
+          const loader = document.getElementById("alpha-loader-wrapper");
+        
+          function isInHeroSection() {
+            const hero = document.querySelector(".hero, #hero");
+            if (!hero) return false;
+        
+            const rect = hero.getBoundingClientRect();
+            return rect.top < window.innerHeight && rect.bottom > 0;
+          }
+        
+          function toggleBubbleVisibility() {
+            if (isInHeroSection()) {
+              bookBtn.style.display = "none";
+            } else {
+              bookBtn.style.display = "flex";
+            }
+          }
+        
+          toggleBubbleVisibility();
+          window.addEventListener("scroll", toggleBubbleVisibility);
+        
+          // Handle click with loader before redirect
+          bookBtn.addEventListener("click", () => {
+            loader.style.display = "flex";
+            // Re-trigger animation
+            const fill = document.getElementById("alpha-progress-fill");
+            fill.style.animation = "none";
+            fill.offsetHeight; // trigger reflow
+            fill.style.animation = "alpha-fill-bar 2s linear forwards";
+        
+            setTimeout(() => {
+              window.location.href = "book.html";
+            }, 2000);
+          });
+        });
+        </script>
+        
+  
+  
+    </footer>
+    <script>
+        window.addEventListener("load", () => {
+          const hash = window.location.hash;
+          if (hash && document.querySelector(hash)) {
+            setTimeout(() => {
+              document.querySelector(hash).scrollIntoView({ behavior: "smooth" });
+            }, 200); // Adjust delay if needed
+          }
+        });
+      </script>
+      
+
+    <script src="script.js"></script>
+</body>
+
+</html>

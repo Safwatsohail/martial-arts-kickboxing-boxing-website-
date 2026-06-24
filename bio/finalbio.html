@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" type="image/png" href="https://cdn2.lnk.bi/profilepics/-2059196_20241012302.png" sizes="32x32">
+ <title>Alpha Academy Dubai - Link in Bio</title>
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ background: linear-gradient(135deg, #000000 0%, #1f1f1f 50%, #450a0a 100%);
+ min-height: 100vh;
+ overflow-x: hidden;
+ }
+
+ /* Glassmorphism Effects */
+ .glassmorphism-card-red {
+ background: linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(0, 0, 0, 0.25));
+ backdrop-filter: blur(25px);
+ -webkit-backdrop-filter: blur(25px);
+ border: 1px solid rgba(239, 68, 68, 0.3);
+ }
+
+ .glassmorphism-button-red {
+ background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(0, 0, 0, 0.4));
+ backdrop-filter: blur(30px);
+ -webkit-backdrop-filter: blur(30px);
+ border: 1px solid rgba(239, 68, 68, 0.4);
+ position: relative;
+ overflow: hidden;
+ transition: all 0.5s ease;
+ }
+
+ .glassmorphism-button-red::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.4), transparent);
+ transition: left 0.6s ease;
+ }
+
+ .glassmorphism-button-red:hover::before {
+ left: 100%;
+ }
+
+ .glassmorphism-button-red:hover {
+ transform: translateY(-4px) scale(1.03);
+ background: linear-gradient(135deg, rgba(239, 68, 68, 0.3), rgba(0, 0, 0, 0.6));
+ box-shadow: 0 15px 35px rgba(239, 68, 68, 0.5), 0 0 60px rgba(220, 38, 38, 0.4);
+ }
+
+ /* Red Neon Glow Effects */
+ .shadow-neon-red {
+ box-shadow: 0 0 25px rgba(239, 68, 68, 0.6), 0 0 50px rgba(220, 38, 38, 0.4);
+ }
+
+ .shadow-glow-white {
+ box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+ }
+
+ .drop-shadow-glow {
+ filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6));
+ }
+
+ /* Animations */
+ @keyframes float {
+ 0%, 100% { transform: translateY(0px) rotate(0deg); }
+ 33% { transform: translateY(-12px) rotate(1deg); }
+ 66% { transform: translateY(-8px) rotate(-1deg); }
+ }
+
+ @keyframes float-delayed {
+ 0%, 100% { transform: translateY(0px) scale(1); }
+ 50% { transform: translateY(-10px) scale(1.02); }
+ }
+
+ @keyframes glow-red {
+ 0%, 100% { 
+ text-shadow: 0 0 15px rgba(239, 68, 68, 0.8), 0 0 30px rgba(220, 38, 38, 0.6);
+ }
+ 50% { 
+ text-shadow: 0 0 25px rgba(239, 68, 68, 1), 0 0 40px rgba(220, 38, 38, 0.8);
+ }
+ }
+
+ @keyframes bounce-slow {
+ 0%, 100% { transform: translateY(0) scale(1); }
+ 50% { transform: translateY(-8px) scale(1.1); }
+ }
+
+ @keyframes pulse-glow {
+ 0%, 100% { opacity: 0.6; transform: scale(1); }
+ 50% { opacity: 0.9; transform: scale(1.05); }
+ }
+
+ @keyframes pulse-fast {
+ 0%, 100% { transform: scale(1); }
+ 50% { transform: scale(1.1); }
+ }
+
+ @keyframes pulse-location {
+ 0%, 100% { opacity: 1; transform: scale(1); }
+ 50% { opacity: 0.7; transform: scale(1.2); }
+ }
+
+ .animate-float { animation: float 4s ease-in-out infinite; }
+ .animate-float-delayed { animation: float-delayed 5s ease-in-out infinite; }
+ .animate-glow-red { animation: glow-red 3s ease-in-out infinite; }
+ .animate-bounce-slow { animation: bounce-slow 2.5s ease-in-out infinite; }
+ .animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+ .animate-pulse-fast { animation: pulse-fast 1.5s ease-in-out infinite; }
+ .animate-pulse-location { animation: pulse-location 3s ease-in-out infinite; }
+
+ /* Layout Styles */
+ .container {
+ position: relative;
+ z-index: 10;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ padding: 1rem;
+ }
+
+ .content-wrapper {
+ width: 100%;
+ max-width: 28rem;
+ margin: 0 auto;
+ }
+
+ .profile-section {
+ text-align: center;
+ margin-bottom: 2rem;
+ }
+
+ .profile-image-container {
+ position: relative;
+ margin-bottom: 2rem;
+ }
+
+ .profile-image {
+ width: 9rem;
+ height: 9rem;
+ margin: 0 auto;
+ border-radius: 50%;
+ overflow: hidden;
+ border: 2px solid rgba(239, 68, 68, 0.4);
+ position: relative;
+ }
+
+ .profile-image img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 50%;
+ }
+
+ .fire-badge {
+ position: absolute;
+ top: -0.75rem;
+ right: -0.75rem;
+ width: 2.5rem;
+ height: 2.5rem;
+ background: linear-gradient(45deg, #ef4444, #dc2626);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 1.125rem;
+ }
+
+ .bio-title {
+ font-size: 1.875rem;
+ font-weight: bold;
+ color: white;
+ margin-bottom: 0.75rem;
+ }
+
+ .bio-subtitle {
+ color: #fca5a5;
+ font-size: 1.25rem;
+ font-weight: 500;
+ letter-spacing: 0.05em;
+ }
+
+ .social-links {
+ display: flex;
+ flex-direction: column;
+ gap: 1.25rem;
+ margin-bottom: 2rem;
+ }
+
+ .social-link {
+ display: block;
+ width: 100%;
+ padding: 1.25rem;
+ border-radius: 1rem;
+ text-decoration: none;
+ color: white;
+ border: 1px solid rgba(239, 68, 68, 0.2);
+ transition: all 0.5s ease;
+ }
+
+ .social-link-content {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ }
+
+ .social-link-left {
+ display: flex;
+ align-items: center;
+ gap: 1.25rem;
+ }
+
+ .social-icon {
+ width: 2rem;
+ height: 2rem;
+ color: white;
+ }
+
+ .social-icon img {
+ width: 2rem;
+ height: 2rem;
+ border-radius: 50%;
+ object-fit: cover;
+ }
+
+ .social-title {
+ font-weight: bold;
+ font-size: 1.125rem;
+ letter-spacing: 0.025em;
+ }
+
+ .arrow-icon {
+ width: 1.75rem;
+ height: 1.75rem;
+ transition: all 0.3s ease;
+ }
+
+ .social-link:hover .arrow-icon {
+ transform: translateX(0.5rem) scale(1.1);
+ }
+
+ .location-section {
+ text-align: center;
+ margin-bottom: 2rem;
+ }
+
+ .location-container {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.75rem;
+ padding: 1rem 2rem;
+ border-radius: 2rem;
+ border: 1px solid rgba(239, 68, 68, 0.4);
+ }
+
+ .location-pin {
+ font-size: 1.875rem;
+ }
+
+ .location-text {
+ text-align: center;
+ }
+
+ .location-main {
+ color: #fecaca;
+ font-weight: bold;
+ font-size: 1.125rem;
+ letter-spacing: 0.025em;
+ display: block;
+ }
+
+ .location-sub {
+ color: #fca5a5;
+ font-size: 0.875rem;
+ letter-spacing: 0.025em;
+ }
+
+ .footer {
+ text-align: center;
+ padding-top: 2rem;
+ }
+
+ .footer-text {
+ color: #9ca3af;
+ font-size: 0.875rem;
+ letter-spacing: 0.05em;
+ }
+
+ #particleCanvas {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 0;
+ pointer-events: none;
+ }
+
+ /* Gradient backgrounds for buttons */
+ .bg-red-gradient { background: linear-gradient(45deg, #dc2626, #ef4444, #dc2626); }
+ .bg-dark-red-gradient { background: linear-gradient(45deg, #1f2937, #450a0a, #000000); }
+ .bg-red-dark-gradient { background: linear-gradient(45deg, #b91c1c, #dc2626, #b91c1c); }
+ .bg-black-gradient { background: linear-gradient(45deg, #000000, #450a0a, #1f2937); }
+
+ /* Mobile Responsive */
+ @media (max-width: 640px) {
+ .glassmorphism-button-red {
+ padding: 1.25rem;
+ margin: 0 0.25rem;
+ }
+ 
+ .glassmorphism-card-red {
+ margin: 0 0.75rem;
+ }
+ }
+
+ /* Custom Scrollbar */
+ ::-webkit-scrollbar {
+ width: 10px;
+ }
+
+ ::-webkit-scrollbar-track {
+ background: rgba(0, 0, 0, 0.5);
+ border-radius: 5px;
+ }
+
+ ::-webkit-scrollbar-thumb {
+ background: linear-gradient(45deg, #dc2626, #ef4444);
+ border-radius: 5px;
+ border: 1px solid rgba(239, 68, 68, 0.3);
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+ background: linear-gradient(45deg, #ef4444, #f87171);
+ }
+ </style>
+</head>
+<body>
+ <!-- Particle Canvas -->
+ <canvas id="particleCanvas"></canvas>
+
+ <!-- Gradient Overlay -->
+ <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5), transparent, rgba(69,10,10,0.3)); z-index: 5;"></div>
+
+ <!-- Main Content -->
+ <div class="container">
+ <div class="content-wrapper">
+ 
+ <!-- Profile Section -->
+ <div class="profile-section animate-float">
+ <div class="profile-image-container">
+ <div class="profile-image glassmorphism-card-red shadow-neon-red">
+ <img 
+ src="https://cdn2.lnk.bi/profilepics/-2059196_20241012302.png"
+ alt="Alpha Academy Dubai Logo"
+ onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+ />
+ <div style="display: none; width: 100%; height: 100%; background: linear-gradient(135deg, #dc2626, #ef4444, #000000); border-radius: 50%; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+ <!-- Fallback custom logo -->
+ <div style="position: relative; width: 6rem; height: 6rem; color: white;">
+ <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+ <div style="width: 5rem; height: 5rem; background: linear-gradient(135deg, #fca5a5, #dc2626); border-radius: 50%; position: relative; border: 2px solid rgba(252,165,165,0.3);">
+ <div style="position: absolute; top: 1.25rem; left: 1rem; width: 0.5rem; height: 0.75rem; background: white; border-radius: 50%;"></div>
+ <div style="position: absolute; top: 1.25rem; right: 1rem; width: 0.5rem; height: 0.75rem; background: white; border-radius: 50%;"></div>
+ <div style="position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); width: 0.25rem; height: 0.5rem; background: black; border-radius: 50%;"></div>
+ <div style="position: absolute; bottom: 0.75rem; left: 50%; transform: translateX(-50%); width: 2rem; height: 0.25rem; background: black; border-radius: 50%;"></div>
+ <div style="position: absolute; bottom: 0.75rem; left: 1.5rem; width: 0.25rem; height: 0.5rem; background: white; border-radius: 50%; transform: rotate(12deg);"></div>
+ <div style="position: absolute; bottom: 0.75rem; right: 1.5rem; width: 0.25rem; height: 0.5rem; background: white; border-radius: 50%; transform: rotate(-12deg);"></div>
+ </div>
+ </div>
+ <div style="position: absolute; inset: 0; background: #ef4444; border-radius: 50%; opacity: 0.2;" class="animate-pulse-glow"></div>
+ </div>
+ </div>
+ </div>
+ <div class="fire-badge animate-pulse-fast shadow-neon-red">
+ <span style="color: white;">🔥</span>
+ </div>
+ </div>
+
+ <!-- Bio -->
+ <h1 class="bio-title animate-glow-red">
+ 🥊 Alpha Academy Dubai
+ </h1>
+ <p class="bio-subtitle">
+ Train Hard. Fight Smart. Win Big.
+ </p>
+ </div>
+
+ <!-- Social Links -->
+ <div class="social-links">
+ <a href="https://www.alphaacademydxb.com/" target="_blank" rel="noopener noreferrer" 
+ class="social-link glassmorphism-button-red bg-red-gradient animate-float-delayed">
+ <div class="social-link-content">
+ <div class="social-link-left">
+ <div class="social-icon animate-bounce-slow drop-shadow-glow">
+ <img 
+ src="https://cdn2.lnk.bi/profilepics/-2059196_20241012302.png"
+ alt="Alpha Academy"
+ onerror="this.outerHTML='<svg class=&quot;social-icon&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;><path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z&quot;/><path d=&quot;M12 2C13.1 2 14 2.9 14 4s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z&quot;/></svg>'"
+ />
+ </div>
+ <span class="social-title">Visit Our Website</span>
+ </div>
+ <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+ </svg>
+ </div>
+ </a>
+
+ <a href="https://tiktok.com/@alpha.academydxb" target="_blank" rel="noopener noreferrer" 
+ class="social-link glassmorphism-button-red bg-dark-red-gradient animate-float-delayed" style="animation-delay: 0.15s;">
+ <div class="social-link-content">
+ <div class="social-link-left">
+ <div class="social-icon animate-bounce-slow drop-shadow-glow">
+ <svg fill="currentColor" viewBox="0 0 24 24">
+ <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+ </svg>
+ </div>
+ <span class="social-title">Follow on TikTok</span>
+ </div>
+ <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+ </svg>
+ </div>
+ </a>
+
+ <a href="https://www.instagram.com/alpha.academy_dxb" target="_blank" rel="noopener noreferrer" 
+ class="social-link glassmorphism-button-red bg-red-dark-gradient animate-float-delayed" style="animation-delay: 0.3s;">
+ <div class="social-link-content">
+ <div class="social-link-left">
+ <div class="social-icon animate-bounce-slow drop-shadow-glow">
+ <svg fill="currentColor" viewBox="0 0 24 24">
+ <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+ </svg>
+ </div>
+ <span class="social-title">Follow on Instagram</span>
+ </div>
+ <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+ </svg>
+ </div>
+ </a>
+
+ <a href="https://wa.me/+9710561110892" target="_blank" rel="noopener noreferrer" 
+ class="social-link glassmorphism-button-red bg-black-gradient animate-float-delayed" style="animation-delay: 0.45s;">
+ <div class="social-link-content">
+ <div class="social-link-left">
+ <div class="social-icon animate-bounce-slow drop-shadow-glow">
+ <svg fill="currentColor" viewBox="0 0 24 24">
+ <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+ </svg>
+ </div>
+ <span class="social-title">Chat on WhatsApp</span>
+ </div>
+ <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+ </svg>
+ </div>
+ </a>
+ </div>
+
+ <!-- Location -->
+ <div class="location-section animate-float-delayed" style="animation-delay: 1.2s;">
+ <a href="https://www.google.com/maps/place/Alpha+Academy/@25.1836204,55.3705375,17z/data=!4m14!1m7!3m6!1s0x3e5f673534b6078d:0x65d7f8edb1c6c0f7!2sAlpha+Academy!8m2!3d25.1836156!4d55.3731124!16s%2Fg%2F11wj80dp43!3m5!1s0x3e5f673534b6078d:0x65d7f8edb1c6c0f7!8m2!3d25.1836156!4d55.3731124!16s%2Fg%2F11wj80dp43?entry=ttu"
+ target="_blank" rel="noopener noreferrer"
+ class="location-container glassmorphism-card-red shadow-neon-red"
+ style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; border-radius: 2rem; border: 1px solid rgba(239, 68, 68, 0.4); text-decoration: none; transition: all 0.3s ease;">
+ 
+ <span class="location-pin animate-pulse-location" style="font-size: 1.875rem;">📍</span>
+ <div class="location-text" style="text-align: center;">
+ <span class="location-main" style="color: #fecaca; font-weight: bold; font-size: 1.125rem; letter-spacing: 0.025em; display: block;">
+ Ras Al Khor, Dubai
+ </span>
+ <span class="location-sub" style="color: #fca5a5; font-size: 0.875rem; letter-spacing: 0.025em;">
+ Building Wasl Green Park, Shop 05
+ </span>
+ </div>
+ </a>
+ </div>
+ 
+ <style>
+ .location-container:hover {
+ transform: translateY(-4px) scale(1.03);
+ box-shadow: 0 15px 35px rgba(239, 68, 68, 0.5), 0 0 60px rgba(220, 38, 38, 0.4);
+ }
+ </style>
+
+ <!-- Footer -->
+ <div class="footer">
+ <p class="footer-text">
+ WE STAND STRONG 🔥🔥🔥 
+ </p>
+ </div>
+ </div>
+ </div>
+
+ <script>
+ // Particle Animation System
+ const canvas = document.getElementById('particleCanvas');
+ const ctx = canvas.getContext('2d');
+ 
+ // Set canvas size
+ function resizeCanvas() {
+ canvas.width = window.innerWidth;
+ canvas.height = window.innerHeight;
+ }
+ 
+ resizeCanvas();
+ window.addEventListener('resize', resizeCanvas);
+
+ // Particle system with red/black theme - clean and minimal
+ const particles = [];
+ const particleCount = 12; // Clean, minimal particle count
+
+ class Particle {
+ constructor() {
+ this.x = Math.random() * canvas.width;
+ this.y = Math.random() * canvas.height;
+ this.vx = (Math.random() - 0.5) * 0.3; // Even slower for cleaner effect
+ this.vy = (Math.random() - 0.5) * 0.3;
+ this.size = Math.random() * 1.5 + 0.5; // Very small particles
+ this.color = this.getRandomColor();
+ this.alpha = Math.random() * 0.3 + 0.2; // More subtle opacity
+ this.pulseSpeed = Math.random() * 0.015 + 0.005;
+ this.pulse = 0;
+ }
+
+ getRandomColor() {
+ const colors = ['#dc2626', '#991b1b', '#450a0a']; // Cleaner, darker red palette
+ return colors[Math.floor(Math.random() * colors.length)];
+ }
+
+ update() {
+ this.x += this.vx;
+ this.y += this.vy;
+ this.pulse += this.pulseSpeed;
+
+ // Bounce off edges
+ if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+ if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+ // Keep particles in bounds
+ this.x = Math.max(0, Math.min(canvas.width, this.x));
+ this.y = Math.max(0, Math.min(canvas.height, this.y));
+ }
+
+ draw() {
+ const glowSize = this.size + Math.sin(this.pulse) * 2;
+ const glowAlpha = this.alpha + Math.sin(this.pulse) * 0.3;
+
+ // Outer glow
+ ctx.beginPath();
+ ctx.arc(this.x, this.y, glowSize * 4, 0, Math.PI * 2);
+ ctx.fillStyle = `${this.color}15`;
+ ctx.fill();
+
+ // Middle glow
+ ctx.beginPath();
+ ctx.arc(this.x, this.y, glowSize * 2.5, 0, Math.PI * 2);
+ ctx.fillStyle = `${this.color}30`;
+ ctx.fill();
+
+ // Inner glow
+ ctx.beginPath();
+ ctx.arc(this.x, this.y, glowSize * 1.5, 0, Math.PI * 2);
+ ctx.fillStyle = `${this.color}50`;
+ ctx.fill();
+
+ // Core particle
+ ctx.beginPath();
+ ctx.arc(this.x, this.y, glowSize, 0, Math.PI * 2);
+ ctx.fillStyle = this.color + Math.floor(glowAlpha * 255).toString(16).padStart(2, '0');
+ ctx.fill();
+ }
+ }
+
+ // Initialize particles
+ for (let i = 0; i < particleCount; i++) {
+ particles.push(new Particle());
+ }
+
+ // Animation loop
+ function animate() {
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+ 
+ particles.forEach(particle => {
+ particle.update();
+ particle.draw();
+ });
+
+ requestAnimationFrame(animate);
+ }
+
+ animate();
+ </script>
+</body>
+</html>

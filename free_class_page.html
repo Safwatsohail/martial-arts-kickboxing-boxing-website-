@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Your Free Class | Alpha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="/log_alpha.png" sizes="32x32">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    :root {
+      --primary-red: #7f1d1d;
+      --dark-black: #0a0a0a;
+      --light-red: #ef4444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #1a0000, #000);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    #alpha-loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+
+    #alpha-loader-image {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    #alpha-loader-text {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary-red);
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    #alpha-progress-bar {
+      width: 200px;
+      height: 8px;
+      background-color: #333;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    #alpha-progress-fill {
+      height: 100%;
+      width: 0%;
+      background-color: red;
+      animation: alpha-fill-bar 2s linear forwards;
+    }
+
+    @keyframes alpha-fill-bar {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    .container {
+      text-align: center;
+      padding: 100px 20px 60px; /* More bottom padding for button */
+      position: relative;
+      z-index: 2;
+    }
+
+    .container h1 {
+      font-size: 2.5rem;
+      color: var(--light-red);
+      margin-bottom: 40px;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      animation: fadeInUp 1.5s ease;
+      margin-bottom: 60px; /* Space below cards for the button */
+    }
+
+    .card {
+      background-color: rgba(127, 29, 29, 0.85);
+      padding: 25px;
+      border-radius: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(239, 68, 68, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(6px);
+      animation: floatCard 4s ease-in-out infinite;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 45px rgba(239, 68, 68, 0.7);
+    }
+
+    .card i {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: white;
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    .whatsapp-btn {
+      margin-top: 15px;
+      background-color: #25d366;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebc59;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #450a0a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 50;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #7f1d1d;
+    }
+
+    /* Particle background */
+    .particles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 0, 0, 0.2);
+      border-radius: 50%;
+      animation: floatParticle 10s infinite ease-in-out;
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes floatParticle {
+      0% { transform: translateY(0) translateX(0); opacity: 0.5; }
+      50% { transform: translateY(-40px) translateX(10px); opacity: 1; }
+      100% { transform: translateY(0) translateX(0); opacity: 0.5; }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* The centered big Contact button below the cards */
+    .contact-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #8B0000, #330000);
+      color: white;
+      border-radius: 30px;
+      padding: 20px 60px;
+      border: 3px solid #8B0000;
+      font-weight: 900;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.6rem;
+      cursor: pointer;
+      box-shadow: 0 0 30px #8B0000;
+      transition: 0.3s ease;
+      text-decoration: none;
+      user-select: none;
+      animation: fadeInUp 1s ease;
+      margin: 0 auto 50px; /* center with bottom margin */
+      display: block;
+      max-width: 320px;
+      text-align: center;
+    }
+
+    .contact-button:hover {
+      background: linear-gradient(135deg, #ff0000, #660000);
+      box-shadow: 0 0 60px #ff0000;
+      border-color: #ff0000;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="alpha-loader-wrapper">
+  <img src="alpha back logo.png" alt="Alpha Logo" id="alpha-loader-image" />
+  <h1 id="alpha-loader-text">ALPHA ACADEMY</h1>
+  <div id="alpha-progress-bar">
+    <div id="alpha-progress-fill"></div>
+  </div>
+</div>
+
+<!-- Particles -->
+<div class="particles">
+  <div class="particle" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+  <div class="particle" style="top: 30%; left: 80%; animation-delay: 2s;"></div>
+  <div class="particle" style="top: 60%; left: 50%; animation-delay: 4s;"></div>
+  <div class="particle" style="top: 80%; left: 10%; animation-delay: 6s;"></div>
+  <div class="particle" style="top: 20%; left: 60%; animation-delay: 8s;"></div>
+</div>
+
+<!-- Back Button -->
+<button class="back-btn" onclick="history.back()">← Back</button>
+
+<!-- Main Content -->
+<div class="container">
+  <h1>Get Your First Free Class in Alpha</h1>
+  <div class="cards">
+    <div class="card">
+      <i class="fab fa-whatsapp"></i>
+      <h2>WhatsApp Us</h2>
+      <p>Chat with our team now</p>
+      <a href="https://wa.me/971561110892" target="_blank">
+        <button class="whatsapp-btn">Message Now</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-phone-alt"></i>
+      <h2>Give Us a Call</h2>
+      <p>Call us for any inquiries</p>
+      <a href="tel:+971561110892">
+        <button class="whatsapp-btn" style="background-color:#f87171;">Call Now</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- The big centered Contact button -->
+  <a href="index.html#contact" class="contact-button" title="Contact us via mail">
+    Contact Us Through Mail
+  </a>
+</div>
+
+<script>
+  // Loader fade
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("alpha-loader-wrapper");
+    setTimeout(() => {
+      loader.style.transition = "opacity 0.5s ease";
+      loader.style.opacity = "0";
+      setTimeout(() => loader.style.display = "none", 500);
+    }, 2000);
+  });
+</script>
+
+</body>
+</html>
