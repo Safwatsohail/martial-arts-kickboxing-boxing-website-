@@ -5,15 +5,9 @@
 
 ---
 
-![Alpha Academy](https://static.wixstatic.com/media/bf8899_58968eaf66f94fcba64c2351393ab178~mv2.png/v1/fill/w_128,h_152,al_c,q_85,enc_avif,quality_auto/bf8899_58968eaf66f94fcba64c2351393ab178~mv2.png)
-
 ## 🏆 About the Academy
 
-Alpha Academy is located in the heart of Dubai, offering world-class martial arts training for beginners and elite athletes alike. With **500+ students trained**, **10+ expert instructors**, and **5 years of experience**, we are committed to transforming lives through discipline, respect, and continuous self-improvement.
-
-📍 **R1081-F1 Building, Wasl Green Park, Shop No. 05 — Ras Al Khor, Dubai**  
-📞 **+971 56 111 0892**  
-📧 **info@alphaacademydubai.com**
+Alpha Academy is located in Dubai, offering world-class martial arts training for beginners and elite athletes alike. With **500+ students trained**, **10+ expert instructors**, and **5 years of experience**, we are committed to transforming lives through discipline, respect, and continuous self-improvement.
 
 ---
 
@@ -120,17 +114,7 @@ Or visit the live site: **[alphaacademydxb.com](https://www.alphaacademydxb.com)
 
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/alpha.academy_dxb)
 [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?style=for-the-badge&logo=TikTok&logoColor=white)](https://tiktok.com/@alpha.academydxb)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/971561110892)
 [![Website](https://img.shields.io/badge/Website-DC2626?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.alphaacademydxb.com)
-
----
-
-## 🕐 Academy Hours
-
-| Days | Hours |
-|---|---|
-| Monday – Friday | 6:00 AM – 10:00 PM |
-| Saturday – Sunday | 8:00 AM – 8:00 PM |
 
 ---
 
